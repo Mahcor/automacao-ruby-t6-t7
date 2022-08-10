@@ -9,7 +9,7 @@ class Home < SitePrism::Page
     element :btn_Fale_Conosco, 'a[href="/#faleConosco"]'
 
     set_url '/'
-    # Valida se estou na página correta
+
     def validate_text_homePage(titleHomePage)
         el_title_HomePage = find('div[class="title"]')
       
@@ -18,9 +18,8 @@ class Home < SitePrism::Page
         end
     end
 
-    # Valida a mensagem da página
-    def validate_text_home(text_home_feature)
-            el_title_HomePage = find('div[class="title"')
+    def validate_text_home(text_home_feature)        
+        el_title_HomePage = find('div[class="title"')
     end
     
     def validate_text_menu_sobreNos(sobre_nos)
@@ -30,16 +29,16 @@ class Home < SitePrism::Page
     end 
 
     def validate_text_menu_depoimentos(depoimentos)
-        if depoimentos == "Depoimentos"
+        if depoimentos == "Depoimentos"        
             el_title_Depoimentos = find('div[class="title"]')
         end
     end 
 
     def validate_text_menu_parceiros(parceiros)
         if parceiros == "Parceiros"
-            title_Parceiros = find('#parceiros > div.MuiBox-root.css-1ln06le > h3')
+            title_Parceiros = find('#parceiros > h3')
         end
-    end 
+    end
 
     def validate_text_menu_faleConosco(faleConosco)
         if faleConosco == "Fale Conosco"
