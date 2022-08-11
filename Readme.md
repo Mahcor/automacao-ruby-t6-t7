@@ -15,4 +15,4 @@ Projeto de automação web utilizando Ruby + Cucumber
 
 *[ChromeDriver](https://chromedriver.chromium.org/downloads) - Instalar o Chrome Driver correspondente a versão do seu navegador chrome.
 
-- Após baixar o arquivo, salvar o download em C:\Windows\System32
+- Após baixar o arquivo, descompactar e colocar o arquivo em C:\Windows\System32
