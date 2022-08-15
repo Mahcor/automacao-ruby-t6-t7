@@ -12,13 +12,13 @@ Projeto de autamação web utilizando Ruby + Cucumber.
 -Adicioná-lo nas variáveis de Ambiente do Sistema em Path.
 
 * Instalar Extensões no VSCode
-- VSCode Icons
-- VSCode Ruby
-- Snippets and Syntax Highlight for Gherkin
-- Ruby language Colarization
-- RUBY
-- Gherkin Indent
-- Cucumber (Gherkin)
+-VSCode Icons
+-VSCode Ruby
+-Snippets and Syntax Highlight for Gherkin
+-Ruby language Colarization
+-RUBY
+-Gherkin Indent
+-Cucumber (Gherkin)
 
 * Instalando as Dependências:
 bundler install
@@ -36,19 +36,6 @@ require 'site_prism'
 require 'pry'
 require_relative 'helper.rb'
 require_relative 'page_helper.rb'
-
-ENVIRONMENT = ENV['ENVIRONMENT']
-puts "ENVIRONMENT is runner >>> #{ENVIRONMENT}"
-
-CONFIG = YAML.load_file(File.dirname(__FILE__) + "/environments/#{ENVIRONMENT}.yml")
-World(Helper)
-World(Pages)
-
-Capybara.configure do |config|
-    config.default_driver = :selenium_chrome
-    config.app_host = CONFIG['url_default']
-    config.default_max_wait_time = 10
-end
 
 
 * Criar o arquivo "gemfile" e incluir as linhas abaixo:
